@@ -1,0 +1,24 @@
+name: Auto CheckIn
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  
+  workflow_dispatch:      
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install requests
+        run: pip install requests
+      - name: Run checkin
+        env:
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          SESSION_COOKIE: ${{ secrets.SESSION_COOKIE }}
+          SESSION_SIG: ${{ secrets.SESSION_SIG }}
+        run: python checkin.py
