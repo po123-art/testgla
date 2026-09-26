@@ -4,7 +4,7 @@ from datetime import datetime
 
 def get_user_status(headers, cookies):
     try:
-        status_url = "https://glados.cloud/api/user/status"
+        status_url = "https://glados.network/api/user/status"
         response = requests.get(status_url, headers=headers, cookies=cookies)
         response.raise_for_status()
         return response.json()
@@ -17,7 +17,7 @@ def checkin():
     print(f"🕐 开始执行 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
 
-    checkin_url = "https://glados.cloud/api/user/checkin"
+    checkin_url = "https://glados.network/api/user/checkin"
     
     headers = {
         "content-type": "application/json;charset=UTF-8",
