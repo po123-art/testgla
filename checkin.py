@@ -21,7 +21,7 @@ def checkin():
     
     headers = {
         "content-type": "application/json;charset=UTF-8",
-        "origin": "https://glados.cloud",
+        "origin": "https://glados.network",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
         "accept": "application/json, text/plain, */*"
     }
@@ -34,7 +34,7 @@ def checkin():
     try:
         print("\n📝 正在执行...")
         
-        payload = {"token": "glados.cloud"}
+        payload = {"token": "glados.network"}
         
         response = requests.post(checkin_url,
             headers=headers,
