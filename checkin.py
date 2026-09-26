@@ -27,8 +27,8 @@ def checkin():
     }
     
     cookies = {
-        "koa:sess": os.getenv("SESSION_COOKIE"),
-        "koa:sess.sig": os.getenv("SESSION_SIG")
+        "gld:sess": os.getenv("SESSION_COOKIE"),
+        "gld:sess.sig": os.getenv("SESSION_SIG")
     }
     
     try:
