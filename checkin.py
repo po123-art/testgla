@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""GLaDOS 自动签到 v2 —— 适配 2026 新版积分/挑战机制"""
+
 import hashlib, os, re, sys, time
 from datetime import datetime, timedelta, timezone
 import requests
