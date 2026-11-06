@@ -194,4 +194,4 @@ def main():
     return 0 if ok == len(accounts) else 1
 
 
-    sys.exit(main())
+sys.exit(main())
