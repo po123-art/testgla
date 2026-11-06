@@ -194,5 +194,4 @@ def main():
     return 0 if ok == len(accounts) else 1
 
 
-if __name__ == "__&#8203;main__":
     sys.exit(main())
